@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.9/angular.min.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+      integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+      crossorigin="anonymous">
+    
+</head>
+<style>
+    .app-container {
+          height: 100vh;
+          width: 100%;
+        }
+        .complete {
+          text-decoration: line-through;
+        }
+</style>
+<body>
+   <center>
+    <div
+    class="app-container d-flex align-items-center justify-content-center flex-column"
+    ng-app="myApp"
+    ng-controller="myController"
+  >
+  
+  </style>
+    <h1>Todo App</h1>
+    <ul>
+        <form action="/todos/createTodo" method='POST'>
+            <input type="text" placeholder="Enter Todo Item" name='todoItem'>
+            <input type="submit" class = "btn btn-danger btn mr-3 btn">
+            <a href="/logout" class="btn btn-info btn">Logout</a>
+        </form>
+
+        <% todos.forEach( el => { %>
+            <li class='todoItem' data-id='<%=el._id%>'>  <!-- id for the database el._id is a unique id   -->
+                <span class='<%= el.completed === true ? 'completed' : 'not'%>'><%= el.todo %></span>
+                <span class='del'><span class = "btn btn-light btn-sm">Delete  </span> 
+
+            </li>
+    <% }) %>    
+    </ul>
+   
+
+    <h2><%= user.userName %> has <%= left %> things left to do.</h2>
+    
+    
+    
+
+    <script src="js/main.js"></script>
+    </center>
+</body>
+</html>

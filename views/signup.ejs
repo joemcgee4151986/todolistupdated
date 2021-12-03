@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:400,700">
+  <title>Bootstrap Simple Login Form with Blue Background</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script> 
+  
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"><style>
+        
+       
+    
+    
+        .app-container {
+          height: 100vh;
+          width: 100%;
+        }
+        .complete {
+          text-decoration: line-through;
+        }
+      </style>
+    </head>
+    <head>
+      <link rel="stylesheet" href="styles.css">
+    </head>
+    <body>
+        <div
+        class="app-container d-flex align-items-center justify-content-center flex-column"
+        ng-app="myApp"
+        ng-controller="myController"
+      >
+    <title>Document</title>
+</head>
+<body>
+    <% if (locals.messages.errors) { %>
+        <% messages.errors.forEach( el => { %>
+            <div class="alert alert-danger"><%= el.msg %></div>
+        <% }) %>    
+    <% } %>
+    
+   
+    </style>
+  </head>
+  <body>
+
+    <form action="/signup" method="POST">
+      <h2>Sign Up</h2>
+      <p>Please fill in this form to create an account!</p>
+      
+          <div class="form-group">
+        <div class="row">
+          <div class="col"><input type="text" class="form-control" name="username" placeholder="User Name" ></div>
+          
+        </div>        	
+          </div>
+          <div class="form-group">
+            <input type="email"  class="form-control" name="email" placeholder="Email" >
+          </div>
+      <div class="form-group">
+              <input type="password" class="form-control" name="password" placeholder="Password" >
+          </div>
+      <div class="form-group">
+              <input type="password" class="form-control" name="confirmPassword" placeholder="Confirm Password" >
+              <input type="submit" class = "btn btn-danger btn mr-3 btn">
+          </div>        
+          
+     
+      </form>
+    
+  </div>
+  </body>
+  </html>
+  <!--
+      <form action="/signup" method="POST">
+          <input type="text" name="userName" placeholder="User Name">
+          <input type="email" name="email" placeholder="Email">
+          <input type="password" name="password" placeholder="Password">
+          <input type="password" name="confirmPassword" placeholder="Confirm Password">
+          <input type="submit">
+      </form>
+  </body>
+  </html>
