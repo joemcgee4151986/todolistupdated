@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.9/angular.min.js"></script>
     <link
@@ -14,12 +14,22 @@
     
 </head>
 <style>
+  @media (min-width:320px)  { /* smartphones, iPhone, portrait 480x320 phones */ }
+@media (min-width:481px)  { /* portrait e-readers (Nook/Kindle), smaller tablets @ 600 or @ 640 wide. */ }
+@media (min-width:641px)  { /* portrait tablets, portrait iPad, landscape e-readers, landscape 800x480 or 854x480 phones */ }
+@media (min-width:961px)  { /* tablet, landscape iPad, lo-res laptops ands desktops */ }
+@media (min-width:1025px) { /* big landscape tablets, laptops, and desktops */ }
+@media (min-width:1281px) { /* hi-res laptops and desktops */ }
     .app-container {
           height: 100vh;
-          width: 100%;
+          width: 80%;
         }
         .complete {
           text-decoration: line-through;
+          box-sizing: border-box;
+        }
+        .form{
+          width: 80%;
         }
 </style>
 <body>
@@ -33,16 +43,18 @@
   </style>
     <h1>Todo App</h1>
     <ul>
-        <form action="/todos/createTodo" method='POST'>
+        <form action="/todos/createTodo"class = form-sm method='POST'>
             <input type="text" placeholder="Enter Todo Item" name='todoItem'>
-            <input type="submit" class = "btn btn-danger btn mr-3 btn">
-            <a href="/logout" class="btn btn-info btn">Logout</a>
+            
+            <input type="submit" class = "btn btn-danger btn mr-3 btn-sm">
+        
+            <a href="/logout" class="btn btn-info btn-sm">logout</a>
         </form>
 
         <% todos.forEach( el => { %>
             <li class='todoItem' data-id='<%=el._id%>'>  <!-- id for the database el._id is a unique id   -->
                 <span class='<%= el.completed === true ? 'completed' : 'not'%>'><%= el.todo %></span>
-                <span class='del'><span class = "btn btn-light btn-sm">Delete  </span> 
+                <span class='del'><span class = "btn btn-light btn-sm">Delete</span> 
 
             </li>
     <% }) %>    
