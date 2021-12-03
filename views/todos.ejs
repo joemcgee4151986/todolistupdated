@@ -7,19 +7,15 @@
     <title>Document</title>
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.9/angular.min.js"></script>
     <link
-      rel="stylesheet"
+    rel="stylesheet"
+    
       href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
       integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
       crossorigin="anonymous">
     
 </head>
 <style>
-  @media (min-width:320px)  { /* smartphones, iPhone, portrait 480x320 phones */ }
-@media (min-width:481px)  { /* portrait e-readers (Nook/Kindle), smaller tablets @ 600 or @ 640 wide. */ }
-@media (min-width:641px)  { /* portrait tablets, portrait iPad, landscape e-readers, landscape 800x480 or 854x480 phones */ }
-@media (min-width:961px)  { /* tablet, landscape iPad, lo-res laptops ands desktops */ }
-@media (min-width:1025px) { /* big landscape tablets, laptops, and desktops */ }
-@media (min-width:1281px) { /* hi-res laptops and desktops */ }
+  
     .app-container {
           height: 100vh;
           width: 80%;
@@ -31,6 +27,8 @@
         .form{
           width: 80%;
         }
+        
+       
 </style>
 <body>
    <center>
@@ -44,7 +42,7 @@
     <h1>Todo App</h1>
     <ul>
         <form action="/todos/createTodo"class = form-sm method='POST'>
-            <input type="text" placeholder="Enter Todo Item" name='todoItem'>
+            <input type="text" placeholder="Enter Todo Item" name='todoItem' style="width:120px">
             
             <input type="submit" class = "btn btn-danger btn mr-3 btn-sm">
         
