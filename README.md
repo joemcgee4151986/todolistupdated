@@ -41,4 +41,8 @@ connect-mongo, dotenv, ejs, express, express-session, mongodb, mongoose, morgan,
  
  Have fun testing and improving it! 😎
 
+# To sign in
+
+- Email: programmer@programmer.com
+- PW: software1234
 
