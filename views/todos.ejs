@@ -39,19 +39,33 @@
   </style>
     <h1>Todo App</h1>
     <ul>
+<<<<<<< HEAD
         <form action="/todos/createTodo"class = form-sm style="width: 60px" method='POST'>
             <input type="text"  placeholder="Enter Todo Item" style="width: 50px" float="right" name='todoItem'>
+=======
+        <form action="/todos/createTodo"class = justify-content-center-flex-column-text-center  section="width:100px" method='POST'>
+            <input type="text" placeholder="Enter Todo Item" style="width: 150px" name='todoItem'> 
+>>>>>>> 4591a7424699ad0482eb02d4adb839eb99f06096
             
-            <input type="submit" class = "btn btn-danger btn mr-3 btn-sm">
+            <input type="submit" class = "btn btn-danger btn mr-3 btn-sm-text-center">
         
-            <a href="/logout" class="btn btn-info btn-sm">logout</a>
+            <a href="/logout" class="btn btn-info btn-sm-text-center">logout</a> 
         </form>
 
         <% todos.forEach( el => { %>
+<<<<<<< HEAD
             <li class='todoItem' data-id='<%=el._id%>'>  <!-- id for the database el._id is a unique id   -->
                 <span class='<%= el.completed === true ? 'completed' : 'not'%>'><%= el.todo %></span>
                 <span class='del'><span class = "btn btn-light btn-sm">Delete</span> 
             </li>
+=======
+            <oi class='todoItem' data-id='<%=el._id%>' >  <!-- id for the database el._id is a unique id   --> <div>&nbsp;</div>
+              <div>&nbsp;</div>
+                <span class='<%= el.completed === true ? 'completed' : 'not'%>'><%= el.todo %></span> 
+              
+                <button class='del btn btn-warning btn-xs-text-center'>delete</button> 
+            </oi>
+>>>>>>> 4591a7424699ad0482eb02d4adb839eb99f06096
     <% }) %>    
     </ul>
    
