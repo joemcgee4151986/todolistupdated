@@ -3,9 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
     <title>Document</title>
-    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.9/angular.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.7/angular.js">  </script>
     <link
     rel="stylesheet"
     
@@ -39,8 +39,8 @@
   </style>
     <h1>Todo App</h1>
     <ul>
-        <form action="/todos/createTodo"class = form-sm style="width:100px" method='POST'>
-            <input type="text" placeholder="Enter Todo Item" style="width: 50px" name='todoItem'>
+        <form action="/todos/createTodo"class = form-sm style="width: 60px" method='POST'>
+            <input type="text"  placeholder="Enter Todo Item" style="width: 50px" float="right" name='todoItem'>
             
             <input type="submit" class = "btn btn-danger btn mr-3 btn-sm">
         
@@ -51,7 +51,6 @@
             <li class='todoItem' data-id='<%=el._id%>'>  <!-- id for the database el._id is a unique id   -->
                 <span class='<%= el.completed === true ? 'completed' : 'not'%>'><%= el.todo %></span>
                 <span class='del'><span class = "btn btn-light btn-sm">Delete</span> 
-
             </li>
     <% }) %>    
     </ul>
@@ -65,4 +64,3 @@
     <script src="js/main.js"></script>
     </center>
 </body>
-</html>
